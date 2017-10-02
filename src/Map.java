@@ -6,6 +6,7 @@ import java.util.Random;
  * A product of mehmetcc (Mehmet Can Altuntaş)
  * Generate beautiful worlds that makes sense
  */
+
 public class Map {
     // variables
     private Tile[][] map;
