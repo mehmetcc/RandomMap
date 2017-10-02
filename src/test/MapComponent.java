@@ -14,7 +14,7 @@ public class MapComponent extends JPanel {
     private static final int MAPSIZE   = 32;
     private static final int PIXELSIZE = 16;
     private static final int WIDTH     = MAPSIZE * PIXELSIZE;
-    private static final int HEIGHT    = MAPSIZE * PIXELSIZE + 256;
+    private static final int HEIGHT    = MAPSIZE * PIXELSIZE;
 
     // variables
     private TileMap  map;
@@ -24,6 +24,9 @@ public class MapComponent extends JPanel {
     public MapComponent() {
         map = new TileMap(MAPSIZE);
         arrayMap = map.getMap();
+
+
+        this.setSize(WIDTH, HEIGHT);
     }
 
     // methods
@@ -41,4 +44,13 @@ public class MapComponent extends JPanel {
             }
         }
     }
+
+    public void reset() {
+        this.removeAll();
+        map.generateMap();
+        this.repaint();
+        this.revalidate();
+    }
+
+    public TileMap getMap() { return map; }
 }

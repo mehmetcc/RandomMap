@@ -7,26 +7,25 @@ import java.awt.*;
 public class App extends JFrame {
     // constants
     private static final int WIDTH  = 512;
-    private static final int HEIGHT = 512;
+    private static final int HEIGHT = 512 + 128;
 
     // swing components
     private BorderLayout layout;
     private MapComponent mapComponent;
+    private ButtonPanel buttonPanel;
 
     // constructor(s)
     public App() {
-        super();
-        initializeGraphicalInterface();
-    }
+        super("MapGenerator");
 
-
-    //methods
-    private void initializeGraphicalInterface() {
         layout = new BorderLayout();
         setLayout(layout);
 
         mapComponent = new MapComponent();
+        buttonPanel = new ButtonPanel(mapComponent);
+
         this.add(mapComponent, BorderLayout.CENTER);
+        this.add(buttonPanel, BorderLayout.SOUTH);
 
         // default settings for JFrame component
         this.setSize(WIDTH, HEIGHT);
@@ -34,5 +33,6 @@ public class App extends JFrame {
         this.setLocationByPlatform(true);
         this.setVisible(true);
     }
+
 
 }
