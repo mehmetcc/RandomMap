@@ -34,7 +34,7 @@ public class TileMap {
 
     // methods
     public void generateMap() {
-        int numberOfLaketileLeaders  = randomNumberInGivenRange(2, 4);
+        int numberOfLaketileLeaders  = randomNumberInGivenRange(1, 3);
         int numberOfGrasslandLeaders = randomNumberInGivenRange(2, 6);
         int numberOfGroundLeaders    = randomNumberInGivenRange(2, 6);
 
