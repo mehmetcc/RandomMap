@@ -26,8 +26,7 @@ public class MapComponent extends JPanel {
         arrayMap = map.getMap();
     }
 
-    // method
-
+    // methods
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
