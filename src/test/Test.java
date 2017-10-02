@@ -1,6 +1,6 @@
 package test;
 
-import core.Map;
+import core.TileMap;
 
 /**
  * A product of mehmetcc (Mehmet Can Altuntaş)
@@ -9,7 +9,6 @@ import core.Map;
 
 public class Test {
     public static void main(String[] args) {
-        Map map = new Map(32);
-        map.printMap();
+        new App();
     }
 }

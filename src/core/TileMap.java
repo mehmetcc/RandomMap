@@ -9,14 +9,14 @@ import java.util.Random;
  * Generate beautiful worlds that makes sense
  */
 
-public class Map {
+public class TileMap {
     // variables
     private Tile[][] map;
     private int mapSize;
     private Random random;
 
     // constructor(s)
-    public Map(int size) {
+    public TileMap(int size) {
         mapSize = size;
         map = new Tile[mapSize][mapSize];
 
