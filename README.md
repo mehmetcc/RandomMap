@@ -4,4 +4,4 @@ Create 2d procedurally generated worlds that makes sense. Uses the Voronoi Diagr
 
 An example map created by the program:
 
-![alt text](https://raw.githubusercontent.com/mehmetcc/RandomMap/blob/master/example.png)
+![alt text](https://raw.githubusercontent.com/mehmetcc/RandomMap/master/example.png)
