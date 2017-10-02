@@ -12,9 +12,9 @@ public class MapComponent extends JPanel {
 
     // constants
     private static final int MAPSIZE   = 32;
-    private static final int PIXELSIZE = 32;
+    private static final int PIXELSIZE = 16;
     private static final int WIDTH     = MAPSIZE * PIXELSIZE;
-    private static final int HEIGHT    = MAPSIZE * PIXELSIZE;
+    private static final int HEIGHT    = MAPSIZE * PIXELSIZE + 256;
 
     // variables
     private TileMap  map;

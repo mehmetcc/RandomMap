@@ -6,8 +6,8 @@ import java.awt.*;
 
 public class App extends JFrame {
     // constants
-    private static final int WIDTH  = 800;
-    private static final int HEIGHT = 800;
+    private static final int WIDTH  = 512;
+    private static final int HEIGHT = 512;
 
     // swing components
     private BorderLayout layout;
