@@ -7,6 +7,10 @@ import core.TileType;
 import javax.swing.*;
 import java.awt.*;
 
+/**
+ * A product of mehmetcc (Mehmet Can Altuntaş)
+ * Generate beautiful worlds that makes sense
+ */
 
 public class MapComponent extends JPanel {
 

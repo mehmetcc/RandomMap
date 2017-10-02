@@ -1,12 +1,14 @@
 package test;
 
-import core.TileMap;
 
 import javax.swing.*;
-import java.awt.*;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
+/**
+ * A product of mehmetcc (Mehmet Can Altuntaş)
+ * Generate beautiful worlds that makes sense
+ */
 
 public class ButtonPanel extends JPanel {
     // constants
