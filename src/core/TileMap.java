@@ -2,6 +2,7 @@ package core;
 
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.LinkedList;
 import java.util.Random;
 
 /**
@@ -14,6 +15,7 @@ public class TileMap {
     private Tile[][] map;
     private int mapSize;
     private Random random;
+    private HashMap<String, Coordinate> leaderCoordinates; // a map that holds the values of the start and the end of the map
 
     // constructor(s)
     public TileMap(int size) {
@@ -30,6 +32,7 @@ public class TileMap {
         }
 
         generateMap();
+
     }
 
     // methods
@@ -93,9 +96,49 @@ public class TileMap {
     }
 
 
-    private void generateRoads() {
-        // ToDo
+    private HashMap<String, Coordinate> generateRoads() {
+        int roadStartX = 0;
+        int roadStartY = 0;
+
+        int roadEndX = 0;
+        int roadEndY = 0;
+
+        HashMap<Integer, Coordinate> leaders = new HashMap<>();
+
+        // generate 4 different leader points
+
+        // starting point
+        roadStartX = randomNumberInGivenRange(2, mapSize / 8);
+        roadStartY = randomNumberInGivenRange(2, mapSize - 2);
+        leaders.put(1, new Coordinate(roadStartX, roadStartY));
+
+        // second point
+        leaders.put(2, new Coordinate(randomNumberInGivenRange(mapSize / 8 + 1, mapSize / 4),
+                                      randomNumberInGivenRange(2, mapSize - 2)));
+
+        // third point
+        leaders.put(2, new Coordinate(randomNumberInGivenRange(mapSize / 4 + 1, mapSize / 2),
+                randomNumberInGivenRange(2, mapSize - 2)));
+
+        // final point
+        roadEndX = randomNumberInGivenRange(2, mapSize - 1);
+        roadEndY = randomNumberInGivenRange(2, mapSize - 2);
+        leaders.put(1, new Coordinate(roadEndX, roadEndY));
+
+
+        // ToDo draw maps
+
+
+
+        // return a hashmap holding the start end the end points
+        HashMap<String, Coordinate> tmp = new HashMap<>();
+        tmp.put("Start", new Coordinate(roadStartX, roadStartY));
+        tmp.put("End", new Coordinate(roadEndX, roadEndY));
+
+        return tmp;
     }
+
+
 
 
     // auxiliaries
@@ -108,7 +151,8 @@ public class TileMap {
                 else if (map[i][j].getType().equals(TileType.LAKETILE))  System.out.print(1 + " ");
                 else if (map[i][j].getType().equals(TileType.GRASSLAND)) System.out.print(2 + " ");
                 else if (map[i][j].getType().equals(TileType.BRIDGE))    System.out.print(3 + " ");
-                else                                                     System.out.print(4 + " "); // void
+                else if (map[i][j].getType().equals(TileType.ROAD))      System.out.print(4 + " ");
+                else                                                     System.out.print(5 + " "); // void
             }
             System.out.println();
         }

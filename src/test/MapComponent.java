@@ -43,6 +43,8 @@ public class MapComponent extends JPanel {
                 if      (arrayMap[x][y].getType().equals(TileType.GROUND))    g.setColor(Color.ORANGE);
                 else if (arrayMap[x][y].getType().equals(TileType.LAKETILE))  g.setColor(Color.BLUE);
                 else if (arrayMap[x][y].getType().equals(TileType.GRASSLAND)) g.setColor(Color.GREEN);
+                else if (arrayMap[x][y].getType().equals(TileType.ROAD))      g.setColor(Color.BLACK);
+                else if (arrayMap[x][y].getType().equals(TileType.BRIDGE))    g.setColor(Color.DARK_GRAY);
 
                 g.fillRect(x * PIXELSIZE, y * PIXELSIZE, PIXELSIZE, PIXELSIZE);
             }

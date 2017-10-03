@@ -6,5 +6,5 @@ package core;
  */
 
 public enum TileType {
-    GROUND, LAKETILE, GRASSLAND, BRIDGE, VOID
+    GROUND, LAKETILE, GRASSLAND, BRIDGE, ROAD, VOID
 }
