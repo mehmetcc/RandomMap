@@ -16,6 +16,7 @@ public class Tile {
 
     public boolean setNewType(TileType t_type) {
         type = t_type;
+
         return true;
     }
 }
